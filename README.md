@@ -1,15 +1,14 @@
 # Algos
+### Improving problem-solving skills using ChatGPT as a 'professor'
 
-### Improving problem solving skills using ChatGPT as a 'professor'
+I'm always struggling with problem-solving in interviews, 
+so I decided to study algorithms and improve my problem-solving skills by using 
+ChatGPT to provide problems, correct my solutions, and explain concepts like **Big O()** and potential improvements.
 
-I'm always struggling in problem solving interviews, so I decided to study algorithms and problem solving,
-but using ChatGPT to give me problems and to correct them, explaining about **Big O()** and what could be improved.
+I'm also creating unit tests because I believe that will improve my code quality as well.
 
-I'm also creating unit tests, cause I think that's gonna improve my code quality too.
+Since GPT is likely sourcing the problems from **HackerRank**, **LeetCode**, or other websites, I often Google the problem and run my solution on the respective platform to evaluate time and memory usage and to check out other people's solutions.
 
-As GPT is probably getting the problems from HackerRank, LeetCode or any other website, I'm googling the problem and running my solution in the 
-respective website to understand the algorithm time and memory use and to check out for others solutions.
+**Goal: 30 minutes a day solving algorithms and reading an algorithm book.**
 
-**Goal**: 30 min a day solving algorithm and also reading an algorithm book.
-
-I've created this repository to track all that, hope it helps you if you're reading this looking for help.
+I created this repository to track all my progress. I hope it helps you if you're reading this and looking for guidance.
