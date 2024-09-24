@@ -38,8 +38,6 @@ public class Exercise11 {
             if(!auxArr[i]) return i;
         }
 
-        System.gc();
-
         return nums[nums.length - 1] + 1;
     }
 
