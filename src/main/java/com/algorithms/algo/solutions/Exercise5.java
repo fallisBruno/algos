@@ -35,7 +35,8 @@ public class Exercise5 {
     }
 
     //ChatGPT solution
-    //it's really fast, but consumes more memory than my findMajorityII
+    //it's really fast, but consumes more memory than my findMajorityII.
+
     //search for Boyer-Moore Voting Algorithm (that's awesome)
     public static int findMajorityGPT(int[] arr) {
         int count = 0;
