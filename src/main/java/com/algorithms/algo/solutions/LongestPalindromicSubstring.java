@@ -3,7 +3,7 @@ package com.algorithms.algo.solutions;
 public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
-        System.out.println(findII("abb"));
+        System.out.println(findIII("abb"));
     }
 
     public static String find(String s){
@@ -43,7 +43,7 @@ public class LongestPalindromicSubstring {
         StringBuilder aux = new StringBuilder();
         String result = String.valueOf(s.charAt(0));
         int left = 0, right = s.length() - 1;
-        while (left <= right){
+        while (left < s.length()){
             while(s.charAt(left) == s.charAt(right)){
                 aux.append(s.charAt(left));
                 if(aux.toString().length() > result.length()){
@@ -56,6 +56,25 @@ public class LongestPalindromicSubstring {
             }
             left++;
             right--;
+        }
+        return result;
+    }
+
+    public static String findIII(String s){
+        int left = 0;
+        StringBuilder aux = new StringBuilder();
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            char currentChar = s.charAt(i);
+            while(currentChar == s.charAt((s.length() - 1) - left)){
+                aux.append(currentChar);
+                left++;
+                currentChar = s.charAt(left);
+            }
+            if(aux.length() > result.length()) result = aux.toString();
+            aux.setLength(0);
+            left++;
+            if(left >= s.length()) break;
         }
         return result;
     }
