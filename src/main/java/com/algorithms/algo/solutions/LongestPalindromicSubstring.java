@@ -3,7 +3,7 @@ package com.algorithms.algo.solutions;
 public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
-        System.out.println(findIV("aacabdkacaa"));
+        System.out.println(longestPalindrome("racecar"));
     }
 
     public static String find(String s) {
@@ -105,6 +105,40 @@ public class LongestPalindromicSubstring {
             }
         }
         return s.substring(begin, end+1);
+    }
+
+
+    //ChatGPT solution, I wasn't able to solve the problem, I tried a lot as it shows my previous commits :/
+    //, but I learned and I debugged the solution below.
+    //NOTES: I focused to much on solving it in O(n) instead of solving the problem first
+    public static String longestPalindrome(String s) {
+        if (s == null || s.length() < 1) return "";
+        int start = 0, end = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            // Check for odd-length palindromes
+            int len1 = expandAroundCenter(s, i, i);
+            // Check for even-length palindromes
+            int len2 = expandAroundCenter(s, i, i + 1);
+
+            int len = Math.max(len1, len2);
+            if (len > end - start) {
+                System.out.println(len);
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
+            }
+        }
+        System.out.println(start + "-" + end);
+        return s.substring(start, end + 1);
+    }
+
+    private static int expandAroundCenter(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            System.out.println("comparing left:" + s.charAt(left) + " to right: " + s.charAt(right));
+            left--;
+            right++;
+        }
+        return right - left - 1; // Return the length of the palindrome
     }
 
 }
