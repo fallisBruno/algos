@@ -1,0 +1,45 @@
+1.1-1 Sometimes me and my friend need to ask for a Uber and we have to think about which spot/address to put first, second or sometimes third.
+
+1.1-2 Time, distance, weight, power, energy ?, potency.
+
+1.1-3 Map. Limitations: high memory consuming and insertion. Strenghs: fast search O(1), flexibility to store any type of object, uniqueness.
+
+1.1-4 For both you try to calculate the shortest path/distance from a point to another one. 
+(had to Google, but I was right, the main difference is that the shortest-path calculates from one point to another and traveling-salesperson calculates for more than 2 points)
+
+1.1-5 Sorting a contact list, you can make use of binary search.
+      An airline company that has to calculate the best route for a flight, based on weather conditions, distance, fuel and all the possible variables.
+
+1.1-6 President's election ? I mean, when they need to calculate who's the winner. You don't have all the votes at once, but you start with something, like the first state to finish the votes or something like that
+      then you have to calculate all the other states in paralel.'
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.2-1 Google Maps, which uses they own algorithm to calculate the best route between two or more points.
+
+1.2-2 I googled the answer: is 43.
+
+1.2-3:2*2  = 4        < 100 * (2 * 2)   = 400
+      2*10 = 1024     < 100 * (10 * 10) = 10000
+      2*20 = 1048576  < 100 * (20 * 20) = 40000
+      2*15 = 32768    > 100 * (15 * 15) = 22500
+
+      Answer: n = 15
+
+1.1 I wasn't able to find out how to solve most part of the problem, so I found this on reddit: https://ita.skanev.com/01/problems/01.html
+
+*******************Solutions*******************
+solutions for part 2.1 are in the files .java
+package is chapterTwo
+***********************************************
+
+*******************Marker***************************************************************
+****************************************************************************************
+Last page read: 25 (not the PDF control panel, but the book's reference page number)
+need to finish the exercise 2.1-5
+****************************************************************************************
+****************************************************************************************
+
+
