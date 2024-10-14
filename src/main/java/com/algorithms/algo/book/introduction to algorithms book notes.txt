@@ -37,8 +37,8 @@ package is chapterTwo
 
 *******************Marker***************************************************************
 ****************************************************************************************
-Last page read: 25 (not the PDF control panel, but the book's reference page number)
-need to finish the exercise 2.1-5
+Last page read: 28 (not the PDF control panel, but the book's reference page number)
+I can start at 29 tomorrow
 ****************************************************************************************
 ****************************************************************************************
 
