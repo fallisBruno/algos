@@ -37,8 +37,8 @@ package is chapterTwo
 
 *******************Marker***************************************************************
 ****************************************************************************************
-Last page read: 28 (not the PDF control panel, but the book's reference page number)
-I can start at 29 tomorrow
+Last page read: search for "Ordem de crescimento",
+I changed to the portuguese version of the book
 ****************************************************************************************
 ****************************************************************************************
 
