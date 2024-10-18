@@ -7,7 +7,8 @@ to: The Algorithm Design Manual
 
 *******************Marker***************************************************************
 ****************************************************************************************
-Stopped at page 10 (not the PDF control panel, but the book's page reference)
+Stopped at page 12 1.3.2 Problems and Properties
+ (not the PDF control panel, but the book's page reference)
 ****************************************************************************************
 ****************************************************************************************
 
