@@ -7,7 +7,7 @@ import java.util.List;
 public class FindAllFactor {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getFactors(42).toArray()));
+        System.out.println(Arrays.toString(getFactors(64).toArray()));
     }
 
     public static List<Integer> getFactors(int n){
