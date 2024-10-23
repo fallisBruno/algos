@@ -7,8 +7,8 @@ to: The Algorithm Design Manual
 
 *******************Marker***************************************************************
 ****************************************************************************************
-Stopped at page 23 1.6 War Story: Psychic Modeling - also take a look at page 621 as
-mentioned by the author
+Stopped at page 27 1.7 Exercises (I might need to see the examples in the book's second
+half to understand things better, those examples were mentioned at 1.6 War Story)
  (not the PDF control panel, but the book's page reference)
 ****************************************************************************************
 ****************************************************************************************
