@@ -18,15 +18,14 @@ public class GroupAnagrams {
             char[] sorted = s.toCharArray();
             Arrays.sort(sorted);
             String sortedString = new String(sorted);
+            List<String> strings;
             if(wordMap.containsKey(sortedString)){
-                List<String> strings = wordMap.get(sortedString);
-                strings.add(s);
-                wordMap.put(sortedString, strings);
+                strings = wordMap.get(sortedString);
             }else{
-                List<String> strings = new ArrayList<>();
-                strings.add(s);
-                wordMap.put(sortedString, strings);
+                strings = new ArrayList<>();
             }
+            strings.add(s);
+            wordMap.put(sortedString, strings);
         }
 
         return wordMap.values().stream().toList();
