@@ -7,9 +7,65 @@ import java.util.List;
 public class MergeIntervals {
 
     public static void main(String[] args) {
-        int[][] arrays = {{1, 4}, {0, 4}};
-        for (int[] arr : merge(arrays))
+        int[][] arrays = {{1, 4}, {0, 0}};
+        for (int[] arr : mergeII(arrays))
             System.out.println(Arrays.toString(arr));
+    }
+
+    public static int[][] mergeIII(int[][] intervals){
+        if(intervals.length == 1) return intervals;
+
+        int index = 0, inputLen = intervals.length;
+        while(index < inputLen) {
+            int first = intervals[index][0];
+            int last = intervals[index][1];
+            while(index < inputLen - 1 && first > intervals[index + 1][0] && first > intervals[index + 1][1]){
+                intervals[index] = intervals[index + 1];
+                index++;
+            }
+
+        }
+    }
+
+    public static int[][] mergeII(int[][] intervals){
+        if(intervals.length == 1) return intervals;
+
+        List<List<Integer>> auxArray = new ArrayList<>();
+        int index = 0;
+        int inputLen = intervals.length;
+        while(index < inputLen) {
+            int first = intervals[index][0];
+            int last = intervals[index][1];
+            if (index < inputLen - 1) {
+                int nextFirst = intervals[index+1][0];
+                int nextLast = intervals[index+1][1];
+                if (first > nextFirst && first > nextLast){
+                    auxArray.add(Arrays.asList(nextFirst, nextLast));
+                    auxArray.add(Arrays.asList(first, last));
+                    index++;
+                } else if (first < nextFirst && last >= nextFirst) {
+                    auxArray.add(Arrays.asList(first, Math.max(last, nextLast)));
+                    index++;
+                }else if(first >= nextFirst && last >= nextLast){
+                    auxArray.add(Arrays.asList(nextFirst, last));
+                    index++;
+                } else if (first < nextFirst && last < nextLast) {
+                    auxArray.add(Arrays.asList(first, last));
+                }
+            }else{
+                auxArray.add(Arrays.asList(first, last));
+            }
+            index++;
+        }
+
+        int[][] result = new int[auxArray.size()][2];
+
+        for (int j = 0; j < auxArray.size(); j++) {
+            result[j][0] = auxArray.get(j).get(0);
+            result[j][1] = auxArray.get(j).get(1);
+        }
+
+        return result;
     }
 
     public static int[][] merge(int[][] intervals){
