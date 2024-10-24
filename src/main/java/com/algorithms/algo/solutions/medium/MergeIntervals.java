@@ -12,6 +12,9 @@ public class MergeIntervals {
             System.out.println(Arrays.toString(arr));
     }
 
+    //the solution might be sort the array or getting all the values without [] then sorting then and creating
+    //a new array with the sorted, but the overlapping rules should be applied when the difference between
+    //the next number is > 1
     public static int[][] mergeIII(int[][] intervals){
         if(intervals.length == 1) return intervals;
 
