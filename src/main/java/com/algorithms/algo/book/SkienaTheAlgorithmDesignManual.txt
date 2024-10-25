@@ -7,13 +7,8 @@ to: The Algorithm Design Manual
 
 *******************Marker***************************************************************
 ****************************************************************************************
-Stopped at page 27 1.7 Exercises (I might need to see the examples in the book's second
-half to understand things better, those examples were mentioned at 1.6 War Story)
-
-I've read part of the Set Cover section 1.8 621, so I can go back to page 27 and
-that might help me to understand the exercises.
-
- (not the PDF control panel, but the book's page reference)
+Stopped at page 28 Exercise 1.6 [5] Set Cover problem
+(not the PDF control panel, but the book's page reference)
 ****************************************************************************************
 ****************************************************************************************
 
