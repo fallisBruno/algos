@@ -1,13 +1,11 @@
 package com.algorithms.algo.solutions.medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class MergeIntervals {
 
     public static void main(String[] args) {
-        int[][] arrays = {{1, 4}, {0, 0}, {6, 8}};
+        int[][] arrays = {{1, 4}, {0, 0}};
         for (int[] arr : mergeIII(arrays))
             System.out.println(Arrays.toString(arr));
     }
@@ -18,28 +16,29 @@ public class MergeIntervals {
     public static int[][] mergeIII(int[][] intervals) {
         if (intervals.length == 1) return intervals;
 
-        int[] auxArr = new int[intervals.length * 2];
+        List<Integer> auxArr = new ArrayList<>();
         for (int i = 0; i < intervals.length; i++) {
-            auxArr[i] = intervals[i][0];
-            auxArr[i + 1] = intervals[i][1];
-            ++i;
+            auxArr.add(intervals[i][0]);
+            auxArr.add(intervals[i][1]);
         }
 
-        Arrays.sort(auxArr);
+        Collections.sort(auxArr);
 
         List<List<Integer>> result = new ArrayList<>();
-        for (int i = 1; i < auxArr.length; i++) {
+        int index = 1;
+        while(index <= auxArr.size()){
             List<Integer> combination = new ArrayList<>();
-            combination.add(auxArr[i - 1]);
-            if (Math.abs(auxArr[i] - auxArr[i + 1]) <= 1) {
-                while (i < auxArr.length - 1 && Math.abs(auxArr[i] - auxArr[i + 1]) <= 1) {
-                    i += 2;
+            combination.add(auxArr.get(index - 1));
+            if(!Objects.equals(auxArr.get(index - 1), auxArr.get(index))){
+                while (index < auxArr.size() - 1 && Math.abs(auxArr.get(index) - auxArr.get(index + 1)) <= 1) {
+                    index += 2;
                 }
-            } else {
-                ++i;
+            }else{
+                index += 2;
             }
-            combination.add(auxArr[i]);
+            combination.add(auxArr.get(index));
             result.add(combination);
+            index+=2;
         }
 
         return result.stream()
