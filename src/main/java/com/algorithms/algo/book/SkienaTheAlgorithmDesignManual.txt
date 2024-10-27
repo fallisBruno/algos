@@ -12,3 +12,55 @@ Stopped at page 28 Exercise 1.6 [5] Set Cover problem
 ****************************************************************************************
 ****************************************************************************************
 
+I'm gonna have to start another book now, Skiena is not for me RIGHT NOW, but I'll
+go back to that again, after studying some math topics. Chat GPT roadmap in portuguese:
+
+Claro, posso ajudar com um roadmap que te guiará para desenvolver uma base sólida em matemática e avançar com algoritmos. Abaixo está uma sequência de estudos sugerida, considerando tanto o Khan Academy quanto livros e outras referências.
+
+### Roadmap de Matemática para Algoritmos
+
+#### 1. **Fundamentos de Matemática**
+   - **Objetivo**: Fortalecer a base em operações matemáticas, proporções e álgebra básica.
+   - **Conteúdo**:
+     - **Khan Academy**: Complete os cursos de *Pre-álgebra*, incluindo razões, taxas, frações, e operações básicas.
+     - **Livro Sugerido**: *Prealgebra* de Richard Rusczyk (Art of Problem Solving) – ideal para aprofundar habilidades de resolução de problemas.
+   - **Duração**: 1-2 semanas, dependendo do domínio.
+
+#### 2. **Álgebra Básica**
+   - **Objetivo**: Entender variáveis, equações, e simplificação de expressões, fundamentais para manipular fórmulas e resolver problemas.
+   - **Conteúdo**:
+     - **Khan Academy**: Complete o módulo de *Álgebra I*.
+     - **Práticas**: Exercícios com simplificação de expressões, resolução de equações e desigualdades.
+   - **Livro Sugerido**: *Algebra I* de Ron Larson e Laurie Boswell.
+   - **Duração**: 2-4 semanas.
+
+#### 3. **Matemática Discreta e Lógica Básica**
+   - **Objetivo**: Aprender os fundamentos de lógica, conjuntos, e provas matemáticas, incluindo indução – essenciais para algoritmos.
+   - **Conteúdo**:
+     - **Khan Academy**: *Introdução à Lógica e Conjuntos* e *Matemática Discreta* (se disponível).
+     - **Livro Sugerido**: *Matemática Discreta e Suas Aplicações* de Kenneth H. Rosen – focar nos capítulos iniciais sobre lógica e conjuntos.
+   - **Duração**: 3-5 semanas, dependendo da intensidade do estudo.
+
+#### 4. **Indução e Provas Matemáticas**
+   - **Objetivo**: Praticar e entender provas matemáticas e aprender sobre indução.
+   - **Conteúdo**:
+     - **Referência**: Vídeos e exercícios sobre provas por indução e outros métodos de prova.
+     - **Livro Sugerido**: *The Art of Proof* de Matthias Beck e Ross Geoghegan, para desenvolver habilidades de provas com exercícios práticos.
+   - **Duração**: 2-3 semanas, praticando provas simples e explorando problemas de algoritmos básicos.
+
+#### 5. **Combinatória e Teoria dos Números**
+   - **Objetivo**: Aprender a contar elementos, combinações, e fundamentos da teoria dos números.
+   - **Conteúdo**:
+     - **Khan Academy**: *Combinatória* e *Teoria dos Números*.
+     - **Práticas**: Exercícios sobre contagem e divisibilidade.
+   - **Livro Sugerido**: *Discrete Mathematics* de Susanna Epp.
+   - **Duração**: 3-4 semanas, com prática de problemas e pequenas provas.
+
+#### 6. **Prática com Algoritmos**
+   - **Objetivo**: Aplicar o conhecimento matemático em problemas de algoritmos básicos.
+   - **Conteúdo**:
+     - **Livros e Plataformas**: Comece a resolver problemas simples em *The Algorithm Design Manual* de Steven Skiena e plataformas como LeetCode (filtros por dificuldade “Fácil”).
+   - **Duração**: Contínuo, reserve pelo menos 1-2 horas por semana para prática de algoritmos.
+
+Esse roadmap dá uma boa base para avançar em matemática e algoritmos. Comece com o Khan Academy e, ao ganhar confiança, vá incorporando os livros sugeridos. Essa trajetória vai te ajudar a dominar os fundamentos matemáticos essenciais para algoritmos.
+

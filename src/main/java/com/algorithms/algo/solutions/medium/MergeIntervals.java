@@ -5,9 +5,30 @@ import java.util.*;
 public class MergeIntervals {
 
     public static void main(String[] args) {
-        int[][] arrays = {{1, 4}, {0, 0}};
-        for (int[] arr : mergeIII(arrays))
+        int[][] arrays = {{1, 3}, {2, 4}};
+        for (int[] arr : mergeIV(arrays))
             System.out.println(Arrays.toString(arr));
+    }
+
+    public static int[][] mergeIV(int[][] intervals) {
+        if (intervals.length == 1) return intervals;
+
+        int newLength = 0;
+        for (int i = 0; i < intervals.length - 1; i++) {
+            int first = intervals[i][0];
+            int second = intervals[i][1];
+            int nextFirst = intervals[i + 1][0];
+            int nextSecond = intervals[i + 1][1];
+            if(first < nextFirst && first < nextSecond && second < nextFirst && second < nextSecond){
+                continue;
+            }else{
+                if(first > nextFirst && first > nextSecond){
+                    intervals[i] =
+                }
+            }
+        }
+
+        return intervals;
     }
 
     //the solution might be sort the array or getting all the values without [] then sorting then and creating
