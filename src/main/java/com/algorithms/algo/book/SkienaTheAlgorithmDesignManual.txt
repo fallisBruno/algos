@@ -5,7 +5,7 @@ to: The Algorithm Design Manual
 ****************************************************************************************
 ****************************************************************************************
 
-*******************Marker***************************************************************
+*******************Skiena The Algorithm Design Msnual Marker****************************
 ****************************************************************************************
 Stopped at page 28 Exercise 1.6 [5] Set Cover problem
 (not the PDF control panel, but the book's page reference)
@@ -14,6 +14,14 @@ Stopped at page 28 Exercise 1.6 [5] Set Cover problem
 
 I'm gonna have to start another book now, Skiena is not for me RIGHT NOW, but I'll
 go back to that again, after studying some math topics. Chat GPT roadmap in portuguese:
+
+
+*******************Marker *Prealgebra* de Richard Rusczyk ******************************
+****************************************************************************************
+Next read is PDF Control Page 28 - 1.4 Negation
+****************************************************************************************
+****************************************************************************************
+
 
 Claro, posso ajudar com um roadmap que te guiará para desenvolver uma base sólida em matemática e avançar com algoritmos. Abaixo está uma sequência de estudos sugerida, considerando tanto o Khan Academy quanto livros e outras referências.
 
