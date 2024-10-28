@@ -15,10 +15,9 @@ Stopped at page 28 Exercise 1.6 [5] Set Cover problem
 I'm gonna have to start another book now, Skiena is not for me RIGHT NOW, but I'll
 go back to that again, after studying some math topics. Chat GPT roadmap in portuguese:
 
-
 *******************Marker *Prealgebra* de Richard Rusczyk ******************************
 ****************************************************************************************
-Next read is PDF Control Page 28 - 1.4 Negation
+Next read is PDF Control Page 35 - 1.5 subtraction
 ****************************************************************************************
 ****************************************************************************************
 
