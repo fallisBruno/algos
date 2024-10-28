@@ -23,7 +23,6 @@ public class MergeIntervals {
                 continue;
             }else{
                 if(first > nextFirst && first > nextSecond){
-                    intervals[i] =
                 }
             }
         }

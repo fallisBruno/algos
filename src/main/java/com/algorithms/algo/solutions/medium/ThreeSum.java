@@ -5,7 +5,53 @@ import java.util.*;
 public class ThreeSum {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(threeSumII(new int[]{-1,0,1,0}).toArray()));
+        System.out.println(Arrays.toString(threeSumIII(new int[]{-1,0,1}).toArray()));
+    }
+
+    public static List<List<Integer>> threeSumIII(int[] nums){
+        Map<Integer, TwoSum> controlMap = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int outerForNum = nums[i];
+            for (int j = 0; j < nums.length; j++) {
+                if(i == j) continue;
+                controlMap.put(outerForNum + nums[j], new TwoSum(i,j));
+            }
+        }
+
+        Set<List<Integer>> result = new HashSet<>();
+
+        for (int i = 0; i < nums.length; i++){
+            TwoSum twoSum = controlMap.get(-nums[i]);
+            if(twoSum != null && twoSum.firstIdx != i && twoSum.secondIdx != i){
+                twoSum.sortByValue(nums);
+                if(nums[i] >= nums[twoSum.firstIdx])
+                    result.add(Arrays.asList(nums[i], nums[twoSum.firstIdx], nums[twoSum.secondIdx]));
+                else if(nums[i] >= nums[twoSum.secondIdx])
+                    result.add(Arrays.asList(nums[twoSum.firstIdx], nums[i], nums[twoSum.secondIdx]));
+                else
+                    result.add(Arrays.asList(nums[twoSum.firstIdx], nums[twoSum.secondIdx], nums[i]));
+            }
+        }
+
+        return new ArrayList<>(result);
+    }
+
+    static class TwoSum{
+        int firstIdx;
+        int secondIdx;
+
+        TwoSum(int first, int second) {
+            firstIdx = first;
+            secondIdx = second;
+        }
+
+        public void sortByValue(int[] nums) {
+            if(nums[firstIdx] >= nums[secondIdx]) return;
+            int aux = firstIdx;
+            firstIdx = secondIdx;
+            secondIdx = aux;
+        }
     }
 
     public static List<List<Integer>> threeSumII(int[] nums){
