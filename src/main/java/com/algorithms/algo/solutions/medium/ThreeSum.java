@@ -5,32 +5,41 @@ import java.util.*;
 public class ThreeSum {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(threeSumIII(new int[]{-1,0,1}).toArray()));
+        System.out.println(Arrays.toString(threeSumIII(new int[]{3,0,-2,-1,1,2}).toArray()));
     }
 
+
+    //it solves the problem, but takes too much time:
+    //308 / 313 testcases passed on LeetCode, at case 308 = Time Limit Exceeded
     public static List<List<Integer>> threeSumIII(int[] nums){
-        Map<Integer, TwoSum> controlMap = new HashMap<>();
+        Map<Integer, List<TwoSum>> controlMap = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             int outerForNum = nums[i];
             for (int j = 0; j < nums.length; j++) {
                 if(i == j) continue;
-                controlMap.put(outerForNum + nums[j], new TwoSum(i,j));
+                int key = outerForNum + nums[j];
+                TwoSum twoSum = new TwoSum(i, j);
+                controlMap.putIfAbsent(key, new ArrayList<>());
+                controlMap.get(key).add(twoSum);
             }
         }
 
         Set<List<Integer>> result = new HashSet<>();
 
         for (int i = 0; i < nums.length; i++){
-            TwoSum twoSum = controlMap.get(-nums[i]);
-            if(twoSum != null && twoSum.firstIdx != i && twoSum.secondIdx != i){
-                twoSum.sortByValue(nums);
-                if(nums[i] >= nums[twoSum.firstIdx])
-                    result.add(Arrays.asList(nums[i], nums[twoSum.firstIdx], nums[twoSum.secondIdx]));
-                else if(nums[i] >= nums[twoSum.secondIdx])
-                    result.add(Arrays.asList(nums[twoSum.firstIdx], nums[i], nums[twoSum.secondIdx]));
-                else
-                    result.add(Arrays.asList(nums[twoSum.firstIdx], nums[twoSum.secondIdx], nums[i]));
+            List<TwoSum> twoSumList = controlMap.get(-nums[i]);
+            if(twoSumList == null) continue;
+            for (TwoSum twoSum: twoSumList){
+                if(twoSum != null && twoSum.firstIdx != i && twoSum.secondIdx != i){
+                    twoSum.sortByValue(nums);
+                    if(nums[i] >= nums[twoSum.firstIdx])
+                        result.add(Arrays.asList(nums[i], nums[twoSum.firstIdx], nums[twoSum.secondIdx]));
+                    else if(nums[i] >= nums[twoSum.secondIdx])
+                        result.add(Arrays.asList(nums[twoSum.firstIdx], nums[i], nums[twoSum.secondIdx]));
+                    else
+                        result.add(Arrays.asList(nums[twoSum.firstIdx], nums[twoSum.secondIdx], nums[i]));
+                }
             }
         }
 
