@@ -5,7 +5,36 @@ import java.util.*;
 public class ThreeSum {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(threeSumIII(new int[]{3,0,-2,-1,1,2}).toArray()));
+        System.out.println(Arrays.toString(threeSumIV(new int[]{3,0,-2,-1,1,2}).toArray()));
+    }
+
+    public static List<List<Integer>> threeSumIV(int[] nums){
+        Arrays.sort(nums);
+
+        Set<Integer> values = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            values.add(nums[i]);
+        }
+
+        Set<List<Integer>> result = new HashSet<>();
+
+        //-2 -1 0 1 2 3
+        int right = nums.length - 1, left = 0;
+        while(left < right){
+            int sum = -(nums[right] + nums[left]);
+            if(values.contains(sum)){
+                List<Integer> list = new ArrayList<>();
+                list.add(nums[right]);
+                list.add(Math.max(sum, nums[left]));
+                list.add(Math.min(sum, nums[left]));
+                if(result.contains(list)) continue;
+                result.add(list);
+            }
+            left++;
+            right--;
+        }
+
+        return new ArrayList<>(result);
     }
 
 
