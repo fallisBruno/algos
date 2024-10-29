@@ -1,23 +1,9 @@
-*******************NOTE***************************************************************
-****************************************************************************************
-I've changed the book that I was reading, it kinda hard for me right now, so I'm changing
-to: The Algorithm Design Manual
-****************************************************************************************
-****************************************************************************************
-
-*******************Skiena The Algorithm Design Msnual Marker****************************
-****************************************************************************************
-Stopped at page 28 Exercise 1.6 [5] Set Cover problem
-(not the PDF control panel, but the book's page reference)
-****************************************************************************************
-****************************************************************************************
-
 I'm gonna have to start another book now, Skiena is not for me RIGHT NOW, but I'll
 go back to that again, after studying some math topics. Chat GPT roadmap in portuguese:
 
 *******************Marker *Prealgebra* de Richard Rusczyk ******************************
 ****************************************************************************************
-Next read is PDF Control Page 35 - 1.5 subtraction
+Next read is PDF Control Page 38 - Problem 1.23 Resolution
 ****************************************************************************************
 ****************************************************************************************
 
