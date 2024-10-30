@@ -5,50 +5,95 @@ import java.util.*;
 public class ThreeSum {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(threeSumIV(new int[]{3,0,-2,-1,1,2}).toArray()));
+        System.out.println(Arrays.toString(threeSumIV(new int[]{0,0,0}).toArray()));
+    }
+
+    //I was not able to provide a faster solution, even that I solved the problem :/
+    //Bellow there's Chat GPT's solution
+    public static List<List<Integer>> GPTSolution(int[] nums){
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums);  // Sort the array to make it easier to avoid duplicates
+
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;  // Skip duplicate numbers to avoid duplicate triplets
+            }
+
+            int left = i + 1;
+            int right = nums.length - 1;
+
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+
+                if (sum == 0) {
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+
+                    // Move the left pointer to avoid duplicates
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    // Move the right pointer to avoid duplicates
+                    while (left < right && nums[right] == nums[right - 1]) right--;
+
+                    left++;
+                    right--;
+                } else if (sum < 0) {
+                    left++;  // Increase the sum by moving the left pointer to the right
+                } else {
+                    right--;  // Decrease the sum by moving the right pointer to the left
+                }
+            }
+        }
+        return result;
     }
 
     public static List<List<Integer>> threeSumIV(int[] nums){
-        Arrays.sort(nums);
-
-        Set<Integer> values = new HashSet<>();
+        Map<Integer, Set<Integer>> controlMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            values.add(nums[i]);
+            controlMap.putIfAbsent(nums[i], new HashSet<>());
+            controlMap.get(nums[i]).add(i);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+
+            }
         }
 
         Set<List<Integer>> result = new HashSet<>();
 
-        //-2 -1 0 1 2 3
-        int right = nums.length - 1, left = 0;
-        while(left < right){
-            int sum = -(nums[right] + nums[left]);
-            if(values.contains(sum)){
-                List<Integer> list = new ArrayList<>();
-                list.add(nums[right]);
-                list.add(Math.max(sum, nums[left]));
-                list.add(Math.min(sum, nums[left]));
-                if(result.contains(list)) continue;
-                result.add(list);
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if(i == j)continue;
+                int sum = -(nums[i] + nums[j]);
+                if(controlMap.containsKey(sum)){
+                    if(!controlMap.get(sum).contains(i) && !controlMap.get(sum).contains(j)){
+                        List<Integer> list = new ArrayList<>();
+                        list.add(sum);list.add(nums[i]);list.add(nums[j]);
+                        Collections.sort(list);
+                        if(result.contains(list)) continue;
+                        result.add(list);
+                    }
+                }
             }
-            left++;
-            right--;
         }
 
         return new ArrayList<>(result);
     }
 
+    private static String buildKey(int value, int position) {
+        return String.valueOf(value).concat("-").concat(String.valueOf(position));
+    }
 
     //it solves the problem, but takes too much time:
     //308 / 313 testcases passed on LeetCode, at case 308 = Time Limit Exceeded
     public static List<List<Integer>> threeSumIII(int[] nums){
-        Map<Integer, List<TwoSum>> controlMap = new HashMap<>();
+        Map<Integer, List<TwoSumFailed>> controlMap = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             int outerForNum = nums[i];
             for (int j = 0; j < nums.length; j++) {
                 if(i == j) continue;
                 int key = outerForNum + nums[j];
-                TwoSum twoSum = new TwoSum(i, j);
+                TwoSumFailed twoSum = new TwoSumFailed(i, j);
                 controlMap.putIfAbsent(key, new ArrayList<>());
                 controlMap.get(key).add(twoSum);
             }
@@ -57,9 +102,9 @@ public class ThreeSum {
         Set<List<Integer>> result = new HashSet<>();
 
         for (int i = 0; i < nums.length; i++){
-            List<TwoSum> twoSumList = controlMap.get(-nums[i]);
+            List<TwoSumFailed> twoSumList = controlMap.get(-nums[i]);
             if(twoSumList == null) continue;
-            for (TwoSum twoSum: twoSumList){
+            for (TwoSumFailed twoSum: twoSumList){
                 if(twoSum != null && twoSum.firstIdx != i && twoSum.secondIdx != i){
                     twoSum.sortByValue(nums);
                     if(nums[i] >= nums[twoSum.firstIdx])
@@ -75,11 +120,11 @@ public class ThreeSum {
         return new ArrayList<>(result);
     }
 
-    static class TwoSum{
+    static class TwoSumFailed{
         int firstIdx;
         int secondIdx;
 
-        TwoSum(int first, int second) {
+        TwoSumFailed(int first, int second) {
             firstIdx = first;
             secondIdx = second;
         }
