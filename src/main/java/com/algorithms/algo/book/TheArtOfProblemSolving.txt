@@ -3,7 +3,7 @@ go back to that again, after studying some math topics. Chat GPT roadmap in port
 
 *******************Marker *Prealgebra* de Richard Rusczyk ******************************
 ****************************************************************************************
-Next read is PDF Control Page 45 - 1.6 Reciprocals
+Next read is PDF Control Page 50 - 1.6.4 (already solved 1.6.3)
 ****************************************************************************************
 ****************************************************************************************
 
