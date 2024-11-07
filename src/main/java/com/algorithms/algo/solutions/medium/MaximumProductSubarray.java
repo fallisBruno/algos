@@ -9,7 +9,7 @@ public class MaximumProductSubarray {
         System.out.println(maxProduct(new int[]{-2,0,-1}));*/
 
 
-        System.out.println(maxProductI(new int[]{-2,10,-1}));
+        System.out.println(maxProductI(new int[]{10,-2,-2}));
     }
 
     public static int maxProductI(int[] nums){
