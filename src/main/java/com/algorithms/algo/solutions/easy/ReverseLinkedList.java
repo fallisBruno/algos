@@ -1,6 +1,8 @@
 package com.algorithms.algo.solutions.easy;
 
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ReverseLinkedList {
@@ -20,10 +22,16 @@ public class ReverseLinkedList {
     }
 
     public static ListNode reverseList(ListNode head) {
-        if(head.next == null) return new ListNode(head.val);
-        ListNode node = reverseList(head.next);
-        node.next = new ListNode(head.val);
-        return node;
+        if(head.next != null){
+            ListNode first = null;
+            int smallestNumber = head.val;
+            ListNode node = reverseList(head.next);
+            ListNode next = new ListNode(head.val);
+            node.next = next;
+            if(first == null) first = node;
+            return head.val == smallestNumber ? first : next;
+        }
+        return new ListNode(head.val);
     }
 
 
