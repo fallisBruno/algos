@@ -21,17 +21,27 @@ public class ReverseLinkedList {
         l2.next.next = new ListNode(4);
     }
 
+    //Solution from Geeks For Geeks, I wasn't able to solve it, tried for days
     public static ListNode reverseList(ListNode head) {
-        if(head.next != null){
-            ListNode first = null;
-            int smallestNumber = head.val;
-            ListNode node = reverseList(head.next);
-            ListNode next = new ListNode(head.val);
-            node.next = next;
-            if(first == null) first = node;
-            return head.val == smallestNumber ? first : next;
-        }
-        return new ListNode(head.val);
+        // If we have reached the last node or the linked
+        // list is empty, simply return the head of linked
+        // list
+        if (head == null || head.next == null)
+            return head;
+
+        // reverse the rest of linked list and put the first
+        // element at the end
+        ListNode rest = reverseList(head.next);
+
+        // Make the current head as last node of remaining
+        // linked list
+        head.next.next = head;
+
+        // Update next of current head to NULL
+        head.next = null;
+
+        // Return the reversed linked list
+        return rest;
     }
 
 
