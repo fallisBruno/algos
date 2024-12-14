@@ -7,7 +7,7 @@ public class ContainerWithMostWater {
     }
 
     //ChatGPT gave me the formula Math.min(currentStart, currentEnd) * (end - start)
-    //but I was only asking to understand some part of the example, anyways, here's the fomular explanation:
+    //but I was only asking to understand some part of the example, anyways, here's the formula explanation:
     //(end - start) calculates the container's width and Math.min(currentStart, currentEnd)
     //brings the shorter height.
     public static int calculate(int[] height){
