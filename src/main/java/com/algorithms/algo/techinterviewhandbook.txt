@@ -2,12 +2,20 @@ I was reading the Math book, but with no goal in mind.
 Now I've started the https://www.techinterviewhandbook.org/software-engineering-interview-guide/, which fits better my
 purpose :)
 
-next topic to read:
-https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction - Problem Navigation
 
-algorithms next topic to read:
-by techinterviewhandbook: follow design-gurus coding interview course
+Tech Interview Handbook:
+    next topic to read:
+        - https://www.techinterviewhandbook.org/software-engineering-interview-guide/#prepare-for-the-behavioral-interview
 
-articles read during algorithms studies:
+System design:
+    next topic to read:
+        - https://www.hellointerview.com/learn/system-design/in-a-hurry/how-to-prepare
+
+algorithms:
+    next topic to read:
+        - https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-nonduplicate-number-instances-easy
+        - https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+
+articles read during studies:
 https://medium.com/@rishu__2701/mastering-sliding-window-techniques-48f819194fd7
 https://www.designgurus.io/answers/detail/what-is-two-pointers-coding-pattern?gad_source=1&gclid=CjwKCAiApsm7BhBZEiwAvIu2X6vvEHxaM70hiC0SGcp02eOZ8JR8aFBCWMpHPKGq9QDjzX9O0wm20BoCWD4QAvD_BwE
