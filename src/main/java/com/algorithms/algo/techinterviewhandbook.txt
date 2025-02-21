@@ -6,10 +6,14 @@ purpose :)
 Tech Interview Handbook:
     next topic to read:
         - https://www.techinterviewhandbook.org/software-engineering-interview-guide/#prepare-for-the-behavioral-interview
+    blocked by:
+        - System Design, I want to finish it first
 
 System design:
     next topic to read:
         - https://www.hellointerview.com/learn/system-design/in-a-hurry/how-to-prepare
+            delivery framework:
+                - https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery
 
 algorithms:
     next topic to read:
