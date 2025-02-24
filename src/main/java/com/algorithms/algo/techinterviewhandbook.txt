@@ -13,7 +13,7 @@ System design:
     next topic to read:
         - https://www.hellointerview.com/learn/system-design/in-a-hurry/how-to-prepare
             delivery framework:
-                - https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery
+                - https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery - 3) Capacity Estimation
 
 algorithms:
     next topic to read:
